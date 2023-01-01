@@ -51,9 +51,11 @@ To deploy j3dog on a live system, follow these steps:
 
 ## Built With
 
-- [JavaScript](https://www.javascript.com/) - The programming language used
-- [HTML](https://www.html.com/) - The markup language used
-- [CSS](https://www.css.com/) - The style sheet language used
+- [TypeScript](https://www.typescriptlang.org/) - The programming language used
+- [JavaScript](https://www.javascript.com/) - The programming language used 
+  in the minified end results
+- [NodeJS](https://nodejs.org/) - The backend solution used
+- [React](https://reactjs.org/) - The frontend solution used
 
 ## Versioning
 
