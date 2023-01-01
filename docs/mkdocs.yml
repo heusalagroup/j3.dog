@@ -31,3 +31,4 @@ markdown_extensions:
       format: !!python/name:mermaid2.fence_mermaid
 nav:
 - Docs: index.md
+- Examples: examples.md
