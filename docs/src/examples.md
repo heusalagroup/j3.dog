@@ -1,21 +1,26 @@
-## Example of a three-dimensional spreadsheet data
+## Example Use Case: Three-Dimensional Spreadsheet Data
 
-### The structure of a three-dimensional spreadsheet database
+This is an example of how a three-dimensional spreadsheet database could be used 
+to track and calculate hours, hourly fees, and sales for multiple projects and
+multiple people.
 
-The three-dimensional spreadsheet in this example has the following dimensions:
+The database has three dimensions: the `X` dimension represents different
+projects, the `Y` dimension represents different people, and the `Z` dimension 
+has three layers: one for tracking hours (`Z1`), one for tracking hourly 
+fees (`Z2`), and one for tracking sales (`Z3`).
 
- * `X` dimension is the project
- * `Y` dimension is the person
- * `Z` dimension has three layers: Hours (`Z1`), fee per hour (`Z2`) and 
-   sales (`Z3`)
+The database allows users to easily track and calculate this data, and to use 
+formulas to perform calculations such as summing hours or averaging fees.
 
-Layers may have aliases to make formulas easier to read and write:
+### Aliases
 
- * `Z1` as `HOURS`
- * `Z2` as `FEE`
- * `Z3` as `SALES`
+To make formulas easier to read and write, layers may be given aliases:
 
-#### `Z1`: Layer for hours for each person in each project
+ * `Z1` is referred to as `HOURS`
+ * `Z2` is referred to as `FEE`
+ * `Z3` is referred to as `SALES`
+
+### `Z1`: Layer for hours for each person in each project
 
 This table displays the contents of the layer `Z1` and cells in `X` and `Y`
 dimensions. Each cell contains the hours to be invoiced for each person. The
@@ -37,7 +42,7 @@ last cell has a formula to calculate the sum of all hours.
 
 Cells may contain values or formulas.
 
-#### `Z2`: Layer for hourly fee for each person in each project
+### `Z2`: Layer for hourly fee for each person in each project
 
 This table displays the contents of the layer `Z2` and cells in `X` and `Y`
 dimensions. Each cell contains the hourly fee for services provided. The
@@ -57,7 +62,7 @@ last cell has a formula to calculate the average hourly fee.
 | James Rodriguez           | 200             | 200              | 200           | `SUM(X2:X-1)`        |
 | Average Fee per Hour      | `AVG(Y2:Y-1)`   | `AVG(Y2:Y-1)`    | `AVG(Y2:Y-1)` | `SUM(X2:X-1)`        |
 
-#### `Z3`: Layer for total sales for each person in each project
+### `Z3`: Layer for total sales for each person in each project
 
 To calculate the total sales for each person in each project, you can use the
 following formula:

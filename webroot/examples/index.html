@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Heusala Group" /><link rel="canonical" href="https://j3.dog/examples/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Examples - j3dog: A Secure, Scalable 3D Data Storage Solution</title>
+    <title>Example Spreadsheet - j3dog: A Secure, Scalable 3D Data Storage Solution</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Examples";
+        var mkdocs_page_name = "Example Spreadsheet";
         var mkdocs_page_input_path = "examples.md";
         var mkdocs_page_url = "/examples/";
       </script>
@@ -42,21 +42,19 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Docs</a>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Examples</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Example Spreadsheet</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#the-structure-of-a-three-dimensional-spreadsheet-database">The structure of a three-dimensional spreadsheet database</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#z1-layer-for-hours-for-each-person-in-each-project">Z1: Layer for hours for each person in each project</a>
+    <li class="toctree-l2"><a class="reference internal" href="#aliases">Aliases</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#z2-layer-for-hourly-fee-for-each-person-in-each-project">Z2: Layer for hourly fee for each person in each project</a>
+    <li class="toctree-l2"><a class="reference internal" href="#z1-layer-for-hours-for-each-person-in-each-project">Z1: Layer for hours for each person in each project</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#z3-layer-for-total-sales-for-each-person-in-each-project">Z3: Layer for total sales for each person in each project</a>
+    <li class="toctree-l2"><a class="reference internal" href="#z2-layer-for-hourly-fee-for-each-person-in-each-project">Z2: Layer for hourly fee for each person in each project</a>
     </li>
-        </ul>
+    <li class="toctree-l2"><a class="reference internal" href="#z3-layer-for-total-sales-for-each-person-in-each-project">Z3: Layer for total sales for each person in each project</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
     </li>
@@ -77,7 +75,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>Examples</li>
+      <li>Example Spreadsheet</li>
     <li class="wy-breadcrumbs-aside">
           <a href="https://github.com/heusalagroup/j3.dog/edit/main/src/examples.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
@@ -87,22 +85,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="example-of-a-three-dimensional-spreadsheet-data">Example of a three-dimensional spreadsheet data<a class="headerlink" href="#example-of-a-three-dimensional-spreadsheet-data" title="Permanent link">&para;</a></h2>
-<h3 id="the-structure-of-a-three-dimensional-spreadsheet-database">The structure of a three-dimensional spreadsheet database<a class="headerlink" href="#the-structure-of-a-three-dimensional-spreadsheet-database" title="Permanent link">&para;</a></h3>
-<p>The three-dimensional spreadsheet in this example has the following dimensions:</p>
+                <h2 id="example-use-case-three-dimensional-spreadsheet-data">Example Use Case: Three-Dimensional Spreadsheet Data<a class="headerlink" href="#example-use-case-three-dimensional-spreadsheet-data" title="Permanent link">&para;</a></h2>
+<p>This is an example of how a three-dimensional spreadsheet database could be used 
+to track and calculate hours, hourly fees, and sales for multiple projects and
+multiple people.</p>
+<p>The database has three dimensions: the <code>X</code> dimension represents different
+projects, the <code>Y</code> dimension represents different people, and the <code>Z</code> dimension 
+has three layers: one for tracking hours (<code>Z1</code>), one for tracking hourly 
+fees (<code>Z2</code>), and one for tracking sales (<code>Z3</code>).</p>
+<p>The database allows users to easily track and calculate this data, and to use 
+formulas to perform calculations such as summing hours or averaging fees.</p>
+<h3 id="aliases">Aliases<a class="headerlink" href="#aliases" title="Permanent link">&para;</a></h3>
+<p>To make formulas easier to read and write, layers may be given aliases:</p>
 <ul>
-<li><code>X</code> dimension is the project</li>
-<li><code>Y</code> dimension is the person</li>
-<li><code>Z</code> dimension has three layers: Hours (<code>Z1</code>), fee per hour (<code>Z2</code>) and 
-   sales (<code>Z3</code>)</li>
+<li><code>Z1</code> is referred to as <code>HOURS</code></li>
+<li><code>Z2</code> is referred to as <code>FEE</code></li>
+<li><code>Z3</code> is referred to as <code>SALES</code></li>
 </ul>
-<p>Layers may have aliases to make formulas easier to read and write:</p>
-<ul>
-<li><code>Z1</code> as <code>HOURS</code></li>
-<li><code>Z2</code> as <code>FEE</code></li>
-<li><code>Z3</code> as <code>SALES</code></li>
-</ul>
-<h4 id="z1-layer-for-hours-for-each-person-in-each-project"><code>Z1</code>: Layer for hours for each person in each project<a class="headerlink" href="#z1-layer-for-hours-for-each-person-in-each-project" title="Permanent link">&para;</a></h4>
+<h3 id="z1-layer-for-hours-for-each-person-in-each-project"><code>Z1</code>: Layer for hours for each person in each project<a class="headerlink" href="#z1-layer-for-hours-for-each-person-in-each-project" title="Permanent link">&para;</a></h3>
 <p>This table displays the contents of the layer <code>Z1</code> and cells in <code>X</code> and <code>Y</code>
 dimensions. Each cell contains the hours to be invoiced for each person. The
 last cell has a formula to calculate the sum of all hours.</p>
@@ -197,7 +197,7 @@ last cell has a formula to calculate the sum of all hours.</p>
 </tbody>
 </table>
 <p>Cells may contain values or formulas.</p>
-<h4 id="z2-layer-for-hourly-fee-for-each-person-in-each-project"><code>Z2</code>: Layer for hourly fee for each person in each project<a class="headerlink" href="#z2-layer-for-hourly-fee-for-each-person-in-each-project" title="Permanent link">&para;</a></h4>
+<h3 id="z2-layer-for-hourly-fee-for-each-person-in-each-project"><code>Z2</code>: Layer for hourly fee for each person in each project<a class="headerlink" href="#z2-layer-for-hourly-fee-for-each-person-in-each-project" title="Permanent link">&para;</a></h3>
 <p>This table displays the contents of the layer <code>Z2</code> and cells in <code>X</code> and <code>Y</code>
 dimensions. Each cell contains the hourly fee for services provided. The
 last cell has a formula to calculate the average hourly fee.</p>
@@ -291,7 +291,7 @@ last cell has a formula to calculate the average hourly fee.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="z3-layer-for-total-sales-for-each-person-in-each-project"><code>Z3</code>: Layer for total sales for each person in each project<a class="headerlink" href="#z3-layer-for-total-sales-for-each-person-in-each-project" title="Permanent link">&para;</a></h4>
+<h3 id="z3-layer-for-total-sales-for-each-person-in-each-project"><code>Z3</code>: Layer for total sales for each person in each project<a class="headerlink" href="#z3-layer-for-total-sales-for-each-person-in-each-project" title="Permanent link">&para;</a></h3>
 <p>To calculate the total sales for each person in each project, you can use the
 following formula:</p>
 <div class="highlight"><pre><span></span><code>SALES = HOURS * FEE
@@ -499,7 +499,7 @@ analyze, and make better decisions with your data.</p>
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Docs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href=".." class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>

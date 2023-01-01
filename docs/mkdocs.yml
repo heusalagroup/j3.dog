@@ -30,5 +30,5 @@ markdown_extensions:
       class: mermaid
       format: !!python/name:mermaid2.fence_mermaid
 nav:
-- Docs: index.md
-- Examples: examples.md
+- "Introduction": index.md
+- "Example Spreadsheet": examples.md
