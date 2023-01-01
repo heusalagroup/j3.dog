@@ -1,3 +1,8 @@
+> `j3dog` is a research and development project from [HG](https://hg.fi). It's a
+> playground on how to use AI to design and organize an open source project and
+> develop a new useful technology. For the most part, it does not exist yet.
+> However, we hope it will soon.
+
 # Introducing j3dog: The Secure, Scalable 3D Object Database
 
 The j3dog database is a secure, scalable data storage solution designed to

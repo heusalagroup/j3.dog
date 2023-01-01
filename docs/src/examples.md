@@ -1,3 +1,8 @@
+> `j3dog` is a research and development project from [HG](https://hg.fi). It's a
+> playground on how to use AI to design and organize an open source project and
+> develop a new useful technology. For the most part, it does not exist yet.
+> However, we hope it will soon.
+
 ## Example Use Case: Three-Dimensional Spreadsheet
 
 This is an example of how a three-dimensional spreadsheet database could be used 

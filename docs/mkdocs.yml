@@ -9,7 +9,15 @@ site_dir: ../webroot
 docs_dir: src
 remote_branch: main
 theme:
+  locale: en
   name: readthedocs
+  collapse_navigation: false
+  features:
+  - announce.dismiss
+  highlightjs: true
+  hljs_languages:
+  - yaml
+  - rust
 plugins:
 - search:
     min_search_length: 2
