@@ -1,0 +1,33 @@
+site_name: j3.dog
+site_description: JavaScript 3D Object Grid
+site_author: Heusala Group
+site_url: https://j3.dog
+copyright: Copyright 2021-2023 <a href="https://heusalagroup.fi">Heusala Group</a>. All rights reserved.
+repo_url: https://github.com/heusalagroup/j3.dog
+edit_uri: edit/main/src
+site_dir: ../webroot
+docs_dir: src
+remote_branch: main
+theme:
+  name: readthedocs
+plugins:
+- search:
+    min_search_length: 2
+    indexing: 'full'
+- mermaid2
+extra_css: [extra.css]
+markdown_extensions:
+- meta
+- attr_list
+- pymdownx.tabbed
+- toc:
+    permalink: true
+    slugify: !!python/name:pymdownx.slugs.uslugify
+- pymdownx.superfences:
+    # make exceptions to highlighting of code:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:mermaid2.fence_mermaid
+nav:
+- Docs: index.md

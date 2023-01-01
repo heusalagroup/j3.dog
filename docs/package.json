@@ -1,0 +1,24 @@
+{
+  "name": "j3.dog",
+  "homepage": "https://j3.dog",
+  "version": "0.1.0",
+  "description": "JavaScript 3D Object Grid",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "install": "pip3 install mkdocs pymdown-extensions mkdocs-mermaid2-plugin",
+    "build": "npm run build:mkdocs",
+    "build:site": "npm run build:mkdocs",
+    "build:api": "npm run build:typedoc",
+    "build:mkdocs": "mkdocs build",
+    "build:typedoc": "typedoc",
+    "start": "mkdocs serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jaakko Heusala <jhh@hg.fi>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {}
+}
