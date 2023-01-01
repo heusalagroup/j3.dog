@@ -1,4 +1,4 @@
-## Example Use Case: Three-Dimensional Spreadsheet Data
+## Example Use Case: Three-Dimensional Spreadsheet
 
 This is an example of how a three-dimensional spreadsheet database could be used 
 to track and calculate hours, hourly fees, and sales for multiple projects and
