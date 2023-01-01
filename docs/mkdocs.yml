@@ -1,5 +1,5 @@
-site_name: j3.dog
-site_description: JavaScript 3D Object Grid
+site_name: "j3dog: A Secure, Scalable 3D Data Storage Solution"
+site_description: "The j3dog database is a secure, scalable data storage solution that provides fast and reliable access to large amounts of data. With a focus on security, performance, and scalability, j3dog is well-suited for a wide range of applications and use cases."
 site_author: Heusala Group
 site_url: https://j3.dog
 copyright: Copyright 2021-2023 <a href="https://heusalagroup.fi">Heusala Group</a>. All rights reserved.
