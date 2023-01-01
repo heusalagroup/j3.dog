@@ -31,5 +31,5 @@ markdown_extensions:
       format: !!python/name:mermaid2.fence_mermaid
 nav:
 - "Introduction": index.md
-- "Example Spreadsheet": examples.md
+- "Use Cases": examples.md
 - "Support": support.md
