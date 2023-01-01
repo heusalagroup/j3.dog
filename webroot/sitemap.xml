@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://j3.dog/api/</loc>
+         <lastmod>2023-01-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://j3.dog/examples/</loc>
          <lastmod>2023-01-01</lastmod>
          <changefreq>daily</changefreq>

@@ -40,4 +40,5 @@ markdown_extensions:
 nav:
 - "Introduction": index.md
 - "Use Cases": examples.md
+- "API": api.md
 - "Support": support.md
