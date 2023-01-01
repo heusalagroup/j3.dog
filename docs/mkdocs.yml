@@ -32,3 +32,4 @@ markdown_extensions:
 nav:
 - "Introduction": index.md
 - "Example Spreadsheet": examples.md
+- "Support": support.md
