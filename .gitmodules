@@ -1,0 +1,52 @@
+[submodule "backend/src/fi/hg/core"]
+	path = backend/src/fi/hg/core
+	url = git@github.com:heusalagroup/fi.hg.core.git
+	branch = main
+[submodule "backend/src/fi/hg/backend"]
+	path = backend/src/fi/hg/backend
+	url = git@github.com:heusalagroup/fi.hg.backend.git
+	branch = main
+[submodule "backend/src/fi/hg/node"]
+	path = backend/src/fi/hg/node
+	url = git@github.com:heusalagroup/fi.hg.node.git
+	branch = main
+[submodule "testing/src/fi/hg/core"]
+	path = testing/src/fi/hg/core
+	url = git@github.com:heusalagroup/fi.hg.core.git
+	branch = main
+[submodule "testing/src/fi/hg/node"]
+	path = testing/src/fi/hg/node
+	url = git@github.com:heusalagroup/fi.hg.node.git
+	branch = main
+[submodule "testing/src/fi/hg/backend"]
+	path = testing/src/fi/hg/backend
+	url = git@github.com:heusalagroup/fi.hg.backend.git
+	branch = main
+[submodule "testing/src/fi/hg/frontend"]
+	path = testing/src/fi/hg/frontend
+	url = git@github.com:heusalagroup/fi.hg.frontend.git
+	branch = main
+[submodule "backend/src/dog/j3/core"]
+	path = backend/src/dog/j3/core
+	url = git@github.com:heusalagroup/dog.j3.core.git
+	branch = main
+[submodule "backend/src/dog/j3/backend"]
+	path = backend/src/dog/j3/backend
+	url = git@github.com:heusalagroup/dog.j3.backend.git
+	branch = main
+[submodule "testing/src/dog/j3/backend"]
+	path = testing/src/dog/j3/backend
+	url = git@github.com:heusalagroup/dog.j3.backend.git
+	branch = main
+[submodule "testing/src/dog/j3/core"]
+	path = testing/src/dog/j3/core
+	url = git@github.com:heusalagroup/dog.j3.core.git
+	branch = main
+[submodule "testing/src/dog/j3/frontend"]
+	path = testing/src/dog/j3/frontend
+	url = git@github.com:heusalagroup/dog.j3.frontend.git
+	branch = main
+[submodule "frontend/src/dog/j3/frontend"]
+	path = frontend/src/dog/j3/frontend
+	url = git@github.com:heusalagroup/dog.j3.frontend.git
+	branch = main
