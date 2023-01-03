@@ -9,7 +9,7 @@ import {
     BACKEND_SCRIPT_NAME,
     BACKEND_LOG_LEVEL,
     BACKEND_URL
-} from "./constants/runtime";
+} from "./dog/j3/backend/constants/runtime";
 
 import { LogService } from "./fi/hg/core/LogService";
 import { LogLevel } from "./fi/hg/core/types/LogLevel";
@@ -21,13 +21,13 @@ import { RequestClient } from "./fi/hg/core/RequestClient";
 import { CommandArgumentUtils } from "./fi/hg/core/cmd/utils/CommandArgumentUtils";
 import { ParsedCommandArgumentStatus } from "./fi/hg/core/cmd/types/ParsedCommandArgumentStatus";
 import { RequestServer } from "./fi/hg/node/RequestServer";
-import { J3BackendController } from "./controllers/J3BackendController";
-import { J3BackendControllerImpl } from "./controllers/J3BackendControllerImpl";
+import { J3BackendController } from "./dog/j3/backend/controllers/J3BackendController";
+import { J3BackendControllerImpl } from "./dog/j3/backend/controllers/J3BackendControllerImpl";
 import { RequestRouter } from "./fi/hg/node/requestServer/RequestRouter";
 import { Headers } from "./fi/hg/core/request/Headers";
-import { BUILD_USAGE_URL, BUILD_WITH_FULL_USAGE } from "./constants/build";
-import { J3GridServiceImpl } from "./services/J3GridServiceImpl";
-import { J3GridService } from "./services/J3GridService";
+import { BUILD_USAGE_URL, BUILD_WITH_FULL_USAGE } from "./dog/j3/backend/constants/build";
+import { J3GridServiceImpl } from "./dog/j3/backend/services/J3GridServiceImpl";
+import { J3GridService } from "./dog/j3/backend/services/J3GridService";
 
 const LOG = LogService.createLogger('main');
 
