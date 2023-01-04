@@ -20,9 +20,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: cd testing && npm ci
     - run: cd testing && npm run test:ci
-      # Set an environment variable based on the build status
       env:
-        BUILD_STATUS: ${{ job.status == 'success' ? 'passing' : 'failing' }}
+        BUILD_STATUS: "${{ job.status == 'success' && 'passing' || 'failing' }}"
     - if: matrix.all_jobs_pass()
       name: Create release and tag
       uses: actions/create-release@v1
