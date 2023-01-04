@@ -32,9 +32,10 @@ jobs:
     steps:
     - name: List changes
       run: |
+        echo "This release contains the following changes:" > changes.md &&
         git log --oneline --no-merges --format="%s" $(git describe --tags --abbrev=0)..${{ github.ref }} |
         jq -R -s -c 'split("\n") | map({"type": "list-item", "text": .})' |
-        jq -s -c '{"type": "list", "items": .}' > changes.md
+        jq -s -c '{"type": "list", "items": .}' >> changes.md
   release:
     name: Publish release
     runs-on: ubuntu-latest
@@ -48,8 +49,6 @@ jobs:
         with:
           tag_name: v0.1.${{ github.run_number }}
           release_name: Release v0.1.${{ github.run_number }}
-          body: |
-            This release contains the following changes :
-            $(cat changes.md)
+          body_path: "changes.md"
           draft: false
           prerelease: false
