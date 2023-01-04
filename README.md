@@ -66,6 +66,19 @@ see the [tags on this repository](https://github.com/heusalagroup/j3.dog/tags).
 
 Full documentation is available at https://j3.dog
 
+## Development with Github using SSH
+
+To use SSH when working with submodules in this repository, you will need to
+configure your Git settings as follows:
+
+```
+git config --global url."git@github.com:heusalagroup/".insteadOf "https://github.com/heusalagroup/"
+```
+
+This configuration is necessary because the repository uses HTTPS links for
+read-only access. However, you may prefer to use SSH when pushing and pulling 
+changes.
+
 ## Support
 
 For support, please visit https://j3dog.com/support.
