@@ -6,26 +6,24 @@ on:
     - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  test:
     strategy:
       matrix:
         os: [ubuntu-22.04, ubuntu-20.04, windows-latest, macos-latest]
         node-version: [14, 16, 18]
+    runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v3
     - run: git submodule update --init --recursive
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
     - run: cd testing && npm ci
     - run: cd testing && npm run test:ci
-      env:
-        BUILD_STATUS: "${{ job.status == 'success' && 'passing' || 'failing' }}"
   release:
     needs:
-      - build
+      - test
     steps:
       name: Create release and tag
       uses: actions/create-release@v1
