@@ -26,17 +26,14 @@ jobs:
     needs:
     - test
     steps:
-    - name: List changes
-      uses: marketplace/actions/list-changes-action@v2
-      with:
-        from: ${{ steps.get-last-release.outputs.tag }}
-        to: ${{ github.ref }}
-        include_pull_requests: true
-        include_issues: true
-        output: changes.md
     - name: Get last release
       id: get-last-release
       uses: actions/get-previous-release@v1
+    - name: List changes
+      run: |
+        git log --oneline --no-merges --format="%s" ${{ steps.get-last-release.outputs.tag }}..${{ github.ref }} |
+        jq -R -s -c 'split("\n") | map({"type": "list-item", "text": .})' |
+        jq -s -c '{"type": "list", "items": .}' > changes.md
   release:
     runs-on: ubuntu-latest
     needs:
@@ -50,7 +47,7 @@ jobs:
           tag_name: v0.1.${{ github.run_number }}
           release_name: Release v0.1.${{ github.run_number }}
           body: |
-            This release contains the following changes:
+            This release contains the following changes :
             $(cat changes.md)
           draft: false
           prerelease: false
