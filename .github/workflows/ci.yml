@@ -35,7 +35,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: List changes
-      run: "./testing/scripts/get-release-message.sh > changes.md"
+      run: "./scripts/get-release-message.sh > changes.md"
     - name: Create release and tag
       uses: actions/create-release@v1
       env:
