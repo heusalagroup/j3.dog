@@ -1,3 +1,5 @@
+![Tests](https://github.com/heusalagroup/j3.dog/actions/workflows/ci.yml/badge.svg)
+
 > `j3dog` is a research and development project from [HG](https://hg.fi). It's a
 > playground on how to use AI to design and organize an open source project and
 > develop a new useful technology. For the most part, it does not exist yet.
