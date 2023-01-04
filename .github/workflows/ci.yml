@@ -28,12 +28,9 @@ jobs:
     needs:
     - test
     steps:
-    - name: Get last release
-      id: get-last-release
-      uses: actions/get-previous-release@v1
     - name: List changes
       run: |
-        git log --oneline --no-merges --format="%s" ${{ steps.get-last-release.outputs.tag }}..${{ github.ref }} |
+        git log --oneline --no-merges --format="%s" $(git describe --tags --abbrev=0)..${{ github.ref }} |
         jq -R -s -c 'split("\n") | map({"type": "list-item", "text": .})' |
         jq -s -c '{"type": "list", "items": .}' > changes.md
   release:
