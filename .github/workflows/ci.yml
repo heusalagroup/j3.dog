@@ -22,6 +22,7 @@ jobs:
     - run: cd testing && npm ci
     - run: cd testing && npm run test:ci
   release:
+    runs-on: ubuntu-latest
     needs:
       - test
     steps:
