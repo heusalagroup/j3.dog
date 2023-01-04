@@ -21,10 +21,26 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: cd testing && npm ci
     - run: cd testing && npm run test:ci
+  list-changes:
+    runs-on: ubuntu-latest
+    needs:
+    - test
+    steps:
+    - name: List changes
+      uses: marketplace/actions/list-changes-action@v2
+      with:
+        from: ${{ steps.get-last-release.outputs.tag }}
+        to: ${{ github.ref }}
+        include_pull_requests: true
+        include_issues: true
+        output: changes.md
+    - name: Get last release
+      id: get-last-release
+      uses: actions/get-previous-release@v1
   release:
     runs-on: ubuntu-latest
     needs:
-      - test
+      - list-changes
     steps:
       - name: Create release and tag
         uses: actions/create-release@v1
@@ -33,5 +49,8 @@ jobs:
         with:
           tag_name: v0.1.${{ github.run_number }}
           release_name: Release v0.1.${{ github.run_number }}
+          body: |
+            This release contains the following changes:
+            $(cat changes.md)
           draft: false
           prerelease: false
