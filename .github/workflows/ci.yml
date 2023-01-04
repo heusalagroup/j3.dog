@@ -39,12 +39,20 @@ jobs:
         git log --oneline --no-merges --format="%s" $(git describe --tags --abbrev=0)..${{ github.ref }} |
         jq -R -s -c 'split("\n") | map({"type": "list-item", "text": .})' |
         jq -s -c '{"type": "list", "items": .}' >> changes.md
+    - name: Persist file to workspace
+      uses: actions/persist_to_workspace@v1
+      with:
+        path: changes.md
   release:
     name: Publish release
     runs-on: ubuntu-latest
     needs:
       - list-changes
     steps:
+      - name: Restore file from workspace
+        uses: actions/restore_from_workspace@v1
+        with:
+          path: changes.md
       - name: Create release and tag
         uses: actions/create-release@v1
         env:
